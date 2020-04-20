@@ -7,9 +7,8 @@ class Show < ActiveRecord::Base
   def actors_list
     actors_array = []
     self.actors.each do |ac|
-      actor_and_show = "#{ac.full_name}"
-      # & #{self.name}
-      actors_array << actor_and_show
+      actor_full_name = "#{ac.full_name}"
+      actors_array << actor_full_name 
     end
     return actors_array
   end
